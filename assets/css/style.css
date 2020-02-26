@@ -1,0 +1,310 @@
+body{
+	font-family: 'Motserrat',  sans-seri;
+	background: #fff;
+	color:  #484848;
+	padding:0;
+	margin:0;
+}
+div, p, a, img, form, button{
+	box-sizing: border-box;
+}
+a{
+	text-decoration: none;color:#484848;
+}
+
+ul, li{
+	display: block;
+	padding: 0;
+	margin: 0;
+}
+
+section{
+	margin-top: 80px;
+	margin-bottom: 65px;
+}
+.header{
+	width:1365px;
+	margin: 0 auto;
+	height: 700px;
+	background: url('../img/paris.jpg') no-repeat center top /cover;
+}
+.menu{
+	margin-top: 35px;
+	margin-left: 25px;
+}
+
+.logo{
+	font-size: 25px;
+	font-weight:700;
+	color: #fff;
+	margin-top: 30px;
+}
+
+.menu li{
+	margin-right:25px;
+}
+
+.menu li a{
+	color: #fff;
+	text-decoration: none;
+}
+.menu li a:hover{
+	color:orange;
+	transition: 0.5s
+}
+.login_btn{
+	background: none;
+	color:#fff;
+	margin-left: auto;
+	margin-top: 30px;
+	margin-left: 90%;
+	border-radius: 5px;
+	border:1px solid #fff;
+	padding:  3px 25px;
+}
+
+.offer__title_one h1{
+	color:#fff;
+	font-size: 51px;
+	text-align: center;
+	margin-top:225px;
+
+}
+
+.offer__title_next h4{
+	color:#fff;
+	font-size: 25px;
+	text-align: center;
+}
+
+.inputGroup{
+	height: 50px;
+	display:flex;
+	position: absolute;
+	margin-top:60px;
+	width: 975px;
+	margin-left:15%;
+}
+input::placeholder {
+	padding:  15px 25px  15px 25px;
+}
+
+.btn_search{
+	background: #ff4b64;
+	width:120px;
+	text-decoration: none;
+	border:none;
+}
+
+.flights{margin-top: 80px;  }
+.fly{width:1110px;}
+.active{
+	color: #ff4b64;
+}
+.text_flights{
+	font-size: 20px;
+	color: #484848;
+}
+
+.menu_flights{
+	padding:0 0 0 100px;
+}
+.menu_flights li{
+	margin-left: 35px;
+}
+.menu_flights li a{
+
+	text-decoration:none;
+}
+.airlines{
+	width:250px;
+}
+.price{
+	width:250px;
+
+}
+.all_flights{
+	float:right;
+	margin-top: 20px;
+}
+
+.table tr th:last-child{padding:10px 50px;}
+.table tr td:last-child{padding:10px 50px;}
+.btn_price{
+	width:115px;
+	border-radius: 5px;
+	border:1px solid #ff4b64;
+}
+.hotels{
+	margin-top: 80px;
+}
+.text_{
+	font-size: 20px;
+	color: #484848;
+}
+.menu_hotelss li a{
+	margin-left:25px;
+}
+.menu_hotelss{float: right;}
+.block_main{
+	width: 1110px;
+
+}
+.block_one{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	width:99%;
+	height: 380px;
+	border:1px solid grey;
+}
+.block_img{
+	width:100%;
+	height:200px;
+	background-position:50% 50%;
+	background-size:cover;
+}
+.description{
+	padding:10px;
+}
+.description h6{padding: 10px 0 0 0; font-weight: 700;}
+.option{
+	padding: 10px 0 0 0;
+}
+.wifi{
+	margin-left: 59%;
+}
+.price_room{
+	margin-top: 20px;
+	border-radius: 5px;
+	border:1px solid #ff4b64;
+	background: #fff;
+	width: 120px;
+	height: 35px;
+}
+
+.banner{
+	width:30%;
+	height: 300px;
+	border:1px solid red;
+}
+.attractions{
+	margin-top: 80px;
+}
+.wrapper {
+	display: grid;
+	grid-template-columns: 2fr 1fr 1fr;
+}
+.box{
+	border:1px solid red;
+	margin:0;
+	padding:0;
+}
+
+.menu_trips li a{
+	margin-left:25px;
+}
+.menu_trips{
+	float: right;
+}
+.block_img{
+	height: 230px;
+}
+.block_tpips{
+	border:0.5px solid lightgrey;
+	margin-top:25px;
+}
+
+.block_text_item h5{
+	font-weight: 700;
+	padding:25px 30px 0 30px;
+}
+.block_text_item p{
+	padding:10px 30px 0 30px;
+}
+.all_trips{
+	margin-top: 20px;
+	float:right;
+}
+.no-margin {margin: 0 !important; }
+
+.block_attr{margin-top: 25px;}
+.item_1{
+	background-position:50% 50%;
+	background-size:cover;
+	background-image:url(../img/tower_1.jpg);
+	width:350px;
+	height: 525px;
+
+}
+
+.item_2{
+	background-position:50% 50%;
+	background-size:cover;
+	width:730px;
+	height: 250px;
+	background-image:url(https://www.discoverwalks.com/blog/wp-content/uploads/2016/07/louvre-big.jpg);
+}
+.item_3{
+	background-position:50% 50%;
+	background-size:cover;
+	margin-top: 25px;
+	width:730px;
+	height: 250px;
+	background-image:url(https://cdn.abcotvs.com/dip/images/5251673_041519-dd-dunn-notre-dame-fire-before-after-compare-vid.jpg?w=1600);
+}
+.item_4{
+	background-position:50% 50%;
+	background-size:cover;
+	width:350px;
+	height: 250px;
+	background-image:url(https://ak0.picdn.net/shutterstock/videos/16155490/thumb/1.jpg);
+}
+.item_5{
+	background-position:50% 50%;
+	background-size:cover;
+	width:350px;
+	height: 250px;
+	background-image:url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQPrYA7G3txnCnkP77vKas-NTaubX_nvnDJUWk2miI7jYdQaVqq);
+}
+.item_6{
+	background-position:50% 50%;
+	background-size:cover;
+	width:350px;
+	height: 250px;
+	background-image:url(https://lh3.googleusercontent.com/proxy/1Qqx3D3Jq5PolxJRdUhTF2GdPIwGJ_yzfOX15pODils2b-s5wyXFZ7ITMdfUdNFKl_nXmq6vx70ufT5l9bq-Sli5);
+}
+
+.all_attr{
+	float:right;
+	margin-top: 20px;
+}
+.item p{
+	position: absolute;
+	top: 50%;
+	left: 40%;
+	font-weight: 500;
+	color:#fff;
+}
+.item_in p{
+	position: relative;
+	top: 50%;
+	left: 45%;
+	font-weight: 500;
+	color:#fff;
+}
+.footer{
+	margin-top: 80px;
+}
+
+
+
+/*
+@media  and (max-width: 992 px) {
+	.header{
+		width:100%; }
+}
+
+@media  and (max-width: 576 px) {
+	.block_trips{width: 100%;}
+}
+*/
