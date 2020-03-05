@@ -3,17 +3,27 @@
 Template name: Home page
 */
 
+require_once 'database.php';
+
 get_header();?>
 
 
 <section class="flights" id="flights">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-6">
-				<h4 class="text_section">Flights</h4>
-			</div>
 
-			<div class="col-md-6">
+					<for action="template-homepage.php" class="input-group col-lg-12" method="POST">
+						<input type="text" name="input_from"  class="input_one"  placeholder="Where are you leaving from?"/>
+					    <input type="text" class="input_two" placeholder="Where do you want to go?" />
+						<input type="Date" class="input_three" placeholder="Date" "/>
+						<input type="submit" class="btn_search" value="Search" onclick="search()" />
+					</for>
+
+		</div>
+			<div class="row" >
+
+				<h4 class="text_ d-flex justify-content-center">Flights</h4>
+
 				<ul class="menu_flights d-flex">
 					<li class="menu_flights__item">
 			            <a href="#" class="active">Non stop</a>
@@ -28,7 +38,7 @@ get_header();?>
 			            <a href="#">Schedule</a>
 					</li>
 				</ul>
-			</div>
+
 		</div>
 
 		<!--table-->
@@ -36,8 +46,8 @@ get_header();?>
 			<div class="table-responsive">
 			<table class="table">
 				<thead >
-					<tr >
-						<th class="airlines">Airles</th>
+					<tr>
+						<th class="airlines">Airlines</th>
 						<th>Date</th>
 						<th>Departure</th>
 						<th>Arrival</th>
@@ -46,160 +56,63 @@ get_header();?>
 					</tr>
 				</thead>
 				<tbody>
+
+
+				<?php
+                $flights = get_flights($db);
+                ?>
+
+
+
+                <?php
+                if(!empty($_POST)){
+                    print_r($_POST);
+                }
+                ?>
+
+
+
+
+				<?php if(count($flights) === 0): ?>
+				   echo 'Other info';
+				   <?php else: ?>
+
+				<?php foreach($flights as $flight): ?>
+
 					<tr>
 						<td class="d-flex">
 							<span style="padding:10px 0" >
-								<img class="vueling_img" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/vueling.png" width="35px" alt="vueling" >
+								<img class="vueling_img" src="<?=$flight["image"]?>" width="35px" height="35px" alt="airline_name" >
 							</span>
 							<span style="margin-left:20px;">
-								<h5>Vueling</h5>
-						    	<p>VO1361</p>
+								<h6><?=$flight["name"]?></h6>
+						    	<p><?=$flight["code"]?>.<?=$flight["no"]?></p>
 						    </span>
 						</td>
 						<td>
-							<h5>03/11/2017</h5>
-							<p>In 3 days</p>
+							<h6><?=$flight["date"]?></h6>
+							<p><?=$flight["reserve"]?></p>
 						</td>
 						<td>
-							<h5>Paris(CDG)</h5>
-							<p>07:15</p>
+							<h6><?=$flight["departure"]?></h6>
+							<p><?=$flight["dep_time"]?></p>
 						</td>
 						<td>
-							<h5>Miami</h5>
-							<p>5:00</p>
+							<h6><?=$flight["arrival"]?></h6>
+							<p><?=$flight["arr_time"]?></p>
 						</td>
 						<td>
-							<h5>08:45</h5>
-							<p>CDG - MIA</p>
+							<h6><?=$flight["time_flitgh"]?></h6>
+							<p><?=$flight["from_to"]?></p>
 						</td>
 						<td>
-							<button class="btn btn_price">870$</button>
+							<button class="btn btn_price"><?=$flight["price"]?>$</button>
 						</td>
 					</tr>
 
-					<tr>
-						<td class="d-flex justify-content-left ">
-							<span style="padding:10px 0" >
-								<img class="vueling_img" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/vueling.png" width="35px" alt="vueling" >
-							</span>
-							<span style="margin-left:20px;">
-								<h5>Vueling</h5>
-						    	<p>VO1361</p>
-						    </span>
-						</td>
-						<td>
-							<h5>03/11/2017</h5>
-							<p>In 3 days</p>
-						</td>
-						<td>
-							<h5>Paris(CDG)</h5>
-							<p>07:15</p>
-						</td>
-						<td>
-							<h5>Miami</h5>
-							<p>5:00</p>
-						</td>
-						<td>
-							<h5>08:45</h5>
-							<p>CDG - MIA</p>
-						</td>
-						<td>
-							<button class="btn btn_price">870$</button>
-						</td>
-					</tr>
+                   <?php endforeach; ?>
+                   <?php endif; ?>
 
-					<tr>
-						<td class="d-flex justify-content-left ">
-							<span style="padding:10px 0" >
-								<img class="vueling_img" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/vueling.png" width="35px" alt="vueling" >
-							</span>
-							<span style="margin-left:20px;">
-								<h5>Vueling</h5>
-						    	<p>VO1361</p>
-						    </span>
-						</td>
-						<td>
-							<h5>03/11/2017</h5>
-							<p>In 3 days</p>
-						</td>
-						<td>
-							<h5>Paris(CDG)</h5>
-							<p>07:15</p>
-						</td>
-						<td>
-							<h5>Miami</h5>
-							<p>5:00</p>
-						</td>
-						<td>
-							<h5>08:45</h5>
-							<p>CDG - MIA</p>
-						</td>
-						<td>
-							<button class="btn btn_price">870$</button>
-						</td>
-					</tr>
-
-					<tr>
-						<td class="d-flex justify-content-left ">
-							<span style="padding:10px 0" >
-								<img class="vueling_img" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/vueling.png" width="35px" alt="vueling" >
-							</span>
-							<span style="margin-left:20px;">
-								<h5>Vueling</h5>
-						    	<p>VO1361</p>
-						    </span>
-						</td>
-						<td>
-							<h5>03/11/2017</h5>
-							<p>In 3 days</p>
-						</td>
-						<td>
-							<h5>Paris(CDG)</h5>
-							<p>07:15</p>
-						</td>
-						<td>
-							<h5>Miami</h5>
-							<p>5:00</p>
-						</td>
-						<td>
-							<h5>08:45</h5>
-							<p>CDG - MIA</p>
-						</td>
-						<td>
-							<button class="btn btn_price">870$</button>
-						</td>
-					</tr>
-
-					<tr>
-						<td class="d-flex justify-content-left ">
-							<span style="padding:10px 0" >
-								<img class="vueling_img" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/vueling.png" width="35px" alt="vueling" >
-							</span>
-							<span style="margin-left:20px;">
-								<h5>Vueling</h5>
-						    	<p>VO1361</p>
-						    </span>
-						</td>
-						<td>
-							<h5>03/11/2017</h5>
-							<p>In 3 days</p>
-						</td>
-						<td>
-							<h5>Paris(CDG)</h5>
-							<p>07:15</p>
-						</td>
-						<td>
-							<h5>Miami</h5>
-							<p>5:00</p>
-						</td>
-						<td>
-							<h5>08:45</h5>
-							<p>CDG - MIA</p>
-						</td>
-						<td>
-							<button class="btn btn_price">870$</button>
-						</td>
-					</tr>
 				</tbody>
 			</table>
 
@@ -239,7 +152,7 @@ get_header();?>
       		      <div class="col col-md-4 col-12">
                         <div class="block_one">
       						<div>
-      							<img class="block_img" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/room_1.jpg" alt="img_1" class="one">
+      							<img class="block_img" src="<?php echo get_template_directory_uri(); ?>/assets/img/room_1.jpg" alt="img_1" class="one">
       						</div>
 
       						<div class="description">
@@ -257,7 +170,7 @@ get_header();?>
       			<div class="col col-md-4 col-12">
                         <div class="block_one">
       						<div>
-      							<img class="block_img" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/room_2.jpg" alt="img_2" class="one">
+      							<img class="block_img" src="<?php echo get_template_directory_uri(); ?>/assets/img/room_2.jpg" alt="img_2" class="one">
       						</div>
 
       						<div class="description">
@@ -274,7 +187,7 @@ get_header();?>
       			<div class="col col-md-4 col-12">
                         <div class="block_one">
       						<div>
-      							<img class="block_img" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/room_3.jpg" alt="img_3" class="one">
+      							<img class="block_img" src="<?php echo get_template_directory_uri(); ?>/assets/img/room_3.jpg" alt="img_3" class="one">
       						</div>
 
       						<div class="description">
@@ -294,7 +207,7 @@ get_header();?>
       			<div class="col col-md-4 col-12">
                         <div class="block_one">
       						<div>
-      							<img class="block_img" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/room_4.jpg" alt="img_4" class="one">
+      							<img class="block_img" src="<?php echo get_template_directory_uri(); ?>/assets/img/room_4.jpg" alt="img_4" class="one">
       						</div>
 
       						<div class="description">
@@ -312,7 +225,7 @@ get_header();?>
                 <div class="col col-md-4 col-12">
                         <div class="block_one">
       						<div>
-      							<img class="block_img" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/room_5.jpg" alt="img_5" class="one">
+      							<img class="block_img" src="<?php echo get_template_directory_uri(); ?>/assets/img/room_5.jpg" alt="img_5" class="one">
       						</div>
 
       						<div class="description">
@@ -328,7 +241,7 @@ get_header();?>
       			<div class="col col-md-4 col-12">
                         <div class="block_one">
       						<div>
-      							<img class="block_img" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/room_6.jpg" alt="img_6" class="one">
+      							<img class="block_img" src="<?php echo get_template_directory_uri(); ?>/assets/img/room_6.jpg" alt="img_6" class="one">
       						</div>
 
       						<div class="description">
@@ -360,7 +273,7 @@ get_header();?>
 			</div>
 
 			<div class="col-md-6">
-				<ul class="menu_hotelss d-flex justify-content-center">
+				<ul class="menu_attr d-flex justify-content-center">
 					<li class="menu_attr__item">
 			            <a href="#" class="active">All</a>
 					</li>
@@ -388,37 +301,40 @@ get_header();?>
 		</div>
 
 	<div class="row block_attr">
-		<div class="col col-md-4">
-			<div class="item_1 item">
+		<div class="col col-sm-12 col-md-12 col-lg-4 ">
+			<div class="item_1 item col col-sm-12 col-md-6 col-lg-12 ">
 			       <p>Eiffel Tower</p>
 		   </div>
 		</div>
 
-		<div class="col col-md-8">
-			<div class="item_2 item_in"><p>Louvres</p></div>
-			<div class="item_3 item_in"><p>Notre Dame de Paris</p></div>
+
+		<div class="col col-sm-12 col-md-8 col-lg-8 no-gutters block_02">
+			<div class="item_2 item_in col-sm-12 "><p>Louvres</p></div>
+			<div class="item_3 item_in  col-sm-12"><p>Notre Dame de Paris</p></div>
 		</div>
+
      </div>
+
 
      <div class="row block_attr">
-		<div class="col col-md-4">
-			<div class="item_4 item"><p>Forum de Halles</p></div>
+		<div class="col col-sm-12 col-md-4">
+			<div class="item_4 item col-sm-12"><p>Forum de Halles</p></div>
+		</div>
+	    <div class="col col-sm-12 col-md-4">
+			<div class="item_5 item col-sm-12"><p>Arc de Triumphe</p></div>
+		</div>
+		<div class="col col-sm-12 col-md-4">
+			<div class="item_6 item col-sm-12"><p>Sacre Ceuer</p></div>
 		</div>
 
-		<div class="col col-md-4">
-			<div class="item_5 item"><p>Arc de Triumphe</p></div>
-
-		</div>
-		<div class="col col-md-4">
-
-			<div class="item_6 item"><p>Sacre Ceuer</p></div>
-		</div>
      </div>
-
             <div class="all_attr">
 		       <a href="#">See all attractions</a>
 	        </div>
 </div>
+
+</section>
+
 <section id="trips" class="trips">
 	<div class="container">
 		<div class="row">
@@ -441,8 +357,8 @@ get_header();?>
 
 
 		<div class="row no-gutters block_tpips">
-		     <div class="col-md-4 " >
-				<img class="block_img" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/download_1.jpg" alt="img_4" class="one">
+		     <div class="col-md-4">
+				<img class="block_img" src="<?php echo get_template_directory_uri(); ?>/assets/img/download_1.jpg" alt="img_4" class="one">
 			</div>
 			<div class="col-md-8 block_text_item" >
 				<h5>Lorem ipsum dolor sit amet, consectetur.</h5>
@@ -452,7 +368,7 @@ get_header();?>
 
 		<div class="row no-gutters block_tpips">
 		     <div class="col-md-4 " >
-				<img class="block_img" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/paris_louvre.jpg" alt="img_4" class="one">
+				<img class="block_img" src="<?php echo get_template_directory_uri(); ?>/assets/img/paris_louvre.jpg" alt="img_4" class="one">
 			</div>
 			<div class="col-md-8 block_text_item" >
 				<h5>Lorem ipsum dolor sit amet, consectetur.</h5>
@@ -462,7 +378,7 @@ get_header();?>
 
 		<div class="row no-gutters block_tpips">
 		     <div class="col-md-4 " >
-				<img class="block_img" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/1.jpg" alt="img_4" class="one">
+				<img class="block_img" src="<?php echo get_template_directory_uri(); ?>/assets/img/1.jpg" alt="img_4" class="one">
 			</div>
 			<div class="col-md-8 block_text_item" >
 				<h5>Lorem ipsum dolor sit amet, consectetur.</h5>
@@ -477,7 +393,6 @@ get_header();?>
 </div>
 
 </section>
-
 
 
 

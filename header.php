@@ -8,8 +8,15 @@
  *
  * @package travel
  */
+ require_once 'database.php';
+ require_once 'functions.php';
 
 ?>
+
+<!--<pre>
+<?php print_r($flights); ?>
+</pre>-->
+
 <!doctype html>
 <html <?php language_attributes(); ?>>
 <head>
@@ -17,6 +24,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
 
 	<?php wp_head(); ?>
@@ -26,14 +34,17 @@
 
 <header id="header" class="header">
 	<div class="container">
-		<div class="row">
-				<div class="col-md-1">
-					<h1 class="logo">TravelCream</h1>
+		<div class="row main_line">
+		<div class="navbar">
+				<div class="col-sm-12 col-lg-1">
+					<a href="/">
+						<h1 class="logo">TravelCream</h1>
+					</a>
 				</div>
 
-				<div class="col-md-5 ">
+				<div class="col-sm-12 col-lg-5">
 					<nav>
-						<ul class="menu d-flex justify-content-center">
+						<ul class="menu">
 							<li class="menu__item">
 								<a href="#flights">Flights</a>
 							</li>
@@ -53,38 +64,27 @@
 					</nav>
 			    </div>
 
-				<div class="col-md-6">
-						<button type="btn" class="login_btn">Login</button>
-				</div>
-		 </div>
 
-		 <div class="row">
-				<div class="col-lg-12">
-					<div class="offer">
-						<div class="offer__title_one">
-							<h1>Do you want to visit Paris?<h1>
-						</div>
-						<div class="offer__title_next">
-							<h4>Why not</h4>
-						</div>
-					</div>
-		       </div>
+				<div class="login d-flex justify-content-center col-sm-6 col-lg-6">
+						<button type="btn" class="login_btn" id="hider" onClick="filter()">Login</button>
+				</div>
+             </div>
+
 		</div>
 
-	</div>
 
+		 <div class="row">
+		 				<div class="col-lg-12">
+		 						<div class="offer__title_one">
+		 							<h1>Do you want to visit Paris?</h1>
+		 						</div>
+		 						<div class="offer__title_next">
+		 							<h4>Why not</h4>
+		 						</div>
+		                </div>
+		 </div>
 
-		<div class="row">
-			<div class="col-lg-12">
-				<div class="inputGroup">
-					<input type="text" placeholder="Where are you leaving from?" size="33%"/>
-					<input type="text" placeholder="Where do you want to go?" size="33%"/>
-					<input type="text" placeholder="Date" size="18,5%"/>
-				    <button type="btn" class="btn_search">Search</button>
-				</div>
-           </div>
-    </div>
+</div>
 
 </header>
-
 	<div id="content" class="site-content">

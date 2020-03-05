@@ -1,5 +1,5 @@
 body{
-	font-family: 'Motserrat',  sans-seri;
+	font-family: 'Motserrat',  sans-serif;
 	background: #fff;
 	color:  #484848;
 	padding:0;
@@ -18,19 +18,32 @@ ul, li{
 	margin: 0;
 }
 
-section{
-	margin-top: 80px;
-	margin-bottom: 65px;
-}
+
 .header{
+
 	width:1365px;
 	margin: 0 auto;
 	height: 700px;
 	background: url('../img/paris.jpg') no-repeat center top /cover;
 }
+.main_line {
+	/*position: fixed;*/
+
+}
+.sticky{color:#000;
+	background: grey;
+
+}
+
+.show {
+	color: #0b2e13;
+	background: #0f6674;
+}
 .menu{
 	margin-top: 35px;
-	margin-left: 25px;
+	margin-left: 10%;
+	display: flex;
+	justify-content: center;
 }
 
 .logo{
@@ -38,6 +51,14 @@ section{
 	font-weight:700;
 	color: #fff;
 	margin-top: 30px;
+	margin-left: 20%;
+	display: flex;
+	justify-content: center;
+}
+
+.login{
+	margin: auto;
+	float: right;
 }
 
 .menu li{
@@ -55,12 +76,11 @@ section{
 .login_btn{
 	background: none;
 	color:#fff;
-	margin-left: auto;
+	margin-left: 500px;
 	margin-top: 30px;
-	margin-left: 90%;
 	border-radius: 5px;
 	border:1px solid #fff;
-	padding:  3px 25px;
+	padding:  1px 35px;
 }
 
 .offer__title_one h1{
@@ -76,22 +96,25 @@ section{
 	font-size: 25px;
 	text-align: center;
 }
-
-.inputGroup{
+.input-group{
 	height: 50px;
 	display:flex;
-	position: absolute;
-	margin-top:60px;
+	justify-content: center;
+	top:-100px;
 	width: 975px;
-	margin-left:15%;
 }
-input::placeholder {
+
+.input-group input::placeholder {
 	padding:  15px 25px  15px 25px;
 }
+.input_one{width:33%;}
+.input_two{width:33%;}
+.input_three{width:18.5%;}
+
 
 .btn_search{
 	background: #ff4b64;
-	width:120px;
+	width:15.5%;
 	text-decoration: none;
 	border:none;
 }
@@ -106,30 +129,26 @@ input::placeholder {
 	color: #484848;
 }
 
-.menu_flights{
-	padding:0 0 0 100px;
+.menu_flights{margin-left: auto;
+	padding:0 0 0 10px;
 }
 .menu_flights li{
 	margin-left: 35px;
 }
-.menu_flights li a{
-
-	text-decoration:none;
-}
+.menu_flights li a{text-decoration:none;}
 .airlines{
 	width:250px;
 }
 .price{
 	width:250px;
-
 }
 .all_flights{
 	float:right;
 	margin-top: 20px;
 }
-
+thead  tr{border-top: none;}
 .table tr th:last-child{padding:10px 50px;}
-.table tr td:last-child{padding:10px 50px;}
+
 .btn_price{
 	width:115px;
 	border-radius: 5px;
@@ -150,6 +169,8 @@ input::placeholder {
 	width: 1110px;
 
 }
+.menu_attr{float: right;}
+.menu_attr li a{margin-left:25px;}
 .block_one{
 	margin-top: 10px;
 	margin-bottom: 10px;
@@ -170,9 +191,7 @@ input::placeholder {
 .option{
 	padding: 10px 0 0 0;
 }
-.wifi{
-	margin-left: 59%;
-}
+.wifi{float: right;margin: auto;}
 .price_room{
 	margin-top: 20px;
 	border-radius: 5px;
@@ -190,16 +209,15 @@ input::placeholder {
 .attractions{
 	margin-top: 80px;
 }
-.wrapper {
-	display: grid;
-	grid-template-columns: 2fr 1fr 1fr;
-}
+
 .box{
 	border:1px solid red;
 	margin:0;
 	padding:0;
 }
-
+.trips{
+	margin-top:80px;
+}
 .menu_trips li a{
 	margin-left:25px;
 }
@@ -227,14 +245,13 @@ input::placeholder {
 }
 .no-margin {margin: 0 !important; }
 
-.block_attr{margin-top: 25px;}
+.block_attr{margin-top: 25px; margin-bottom: 25px;}
 .item_1{
 	background-position:50% 50%;
 	background-size:cover;
 	background-image:url(../img/tower_1.jpg);
 	width:350px;
 	height: 525px;
-
 }
 
 .item_2{
@@ -271,7 +288,7 @@ input::placeholder {
 	background-size:cover;
 	width:350px;
 	height: 250px;
-	background-image:url(https://lh3.googleusercontent.com/proxy/1Qqx3D3Jq5PolxJRdUhTF2GdPIwGJ_yzfOX15pODils2b-s5wyXFZ7ITMdfUdNFKl_nXmq6vx70ufT5l9bq-Sli5);
+	background-image:url(https://www.discoverwalks.com/blog/wp-content/uploads/2018/04/top10funfactsaboutthesacrecoeur11-816x489.jpg);
 }
 
 .all_attr{
@@ -296,15 +313,117 @@ input::placeholder {
 	margin-top: 80px;
 }
 
+.fa{
+	color: #fff;
+	margin-top: 40px;
+	margin-left: 10px;
+	width: 25px;
+	height: 25px;
+	display: none;
+}
 
 
-/*
-@media  and (max-width: 992 px) {
+
+@media only screen and (max-width : 992px){
 	.header{
-		width:100%; }
+		width:100%;
+		height: 700px;
+		background: url('../img/paris.jpg') no-repeat center top /cover;
+	}
+	.logo{display: flex;margin-left: 0;
+		justify-content: center;
+	}
+	.login{
+		display: flex;
+		justify-content: center;
+	}
+
+	.login_btn{margin-left: 110%;
+	}
+	.offer__title_one h1{margin-top:100px;}
+	.item_1{
+		margin-bottom: 25px;width: 100%;
+	}
+	.item_2{width:720px;}
+	.item_3{width:720px;}
+	.item_4{
+		margin-top: 25px;
+		width: 720px;
+	}
+	.item_5{
+		margin-top: 25px;
+		width: 720px;
+	}
+	.item_6{
+		margin-top: 25px;
+		width: 720px;
+	}
+	.block_02{
+		width: 100%;
+	}
+
 }
 
-@media  and (max-width: 576 px) {
-	.block_trips{width: 100%;}
+@media only screen and (max-width: 768px) {
+	.item_1{
+		margin-bottom: 25px;width: 100%;
+	}
+
+	.item_2{width:540px;}
+	.item_3{width:540px;}
+	.item_4{
+		margin-top: 25px;
+		width: 540px;
+	}
+	.item_5{
+		margin-top: 25px;
+		width: 540px;
+	}
+	.item_6{
+		margin-top: 25px;
+		width: 540px;
+	}
+	footer .contact {display: flex;justify-content:center; margin-top: 25px;margin-left: 10%;margin-bottom: 25px;}
+	footer .contact p{margin-left: 25px;}
+	footer h3{font-size: 20px;}
 }
-*/
+
+@media only screen and (max-width: 576px) {
+	footer .contact {display: flex;justify-content:center; margin-top: 25px;margin-left: 10%;margin-bottom: 25px;}
+	footer .contact p{margin-left: 25px;}
+	footer h3{font-size: 20px;}
+	.block_trips{width: 100%;}
+	.menu_attr li a{margin-left:20px;}
+	.fa{display: block;}
+	.logo{display: flex;
+		justify-content: center;margin-left: 0;}
+	.login{
+		display: flex;
+		justify-content: center;
+	}
+	.block_attr{display: block;}
+	.block_02{
+		width: 100%;
+	}
+	.login_btn{}
+	.item_1{
+		margin-bottom: 25px;width: 100%;
+	}
+
+	.item_2{width:450px;}
+	.item_3{width:450px;}
+	.item_4{
+		margin-top: 25px;
+		width: 450px;
+	}
+	.item_5{
+		margin-top: 25px;
+		width: 450px;
+	}
+	.item_6{
+		margin-top: 25px;
+		width: 450px;
+	}
+
+
+}

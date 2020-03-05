@@ -6,6 +6,38 @@
  *
  * @package travel
  */
+function get_flights($db){
+
+		  $sql =" SELECT * FROM airlines, flights WHERE airlines.name_code=flights.code";
+
+		  $result = mysqli_query($db, $sql);
+
+		  $flights = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+		  return $flights;
+		}
+
+
+		/*function search($db){
+                    if(isset($_POST['search']))
+                        $searchq = $_POST['search'];
+                        $searchq = preg_replace("##[^0-9a-z]#i", "", $searchq);
+
+                        $query = mysqli_query("SELECT * FROM flights WHERE flights.departure LIKE '%$searchq%'") or die("Could not search!");
+                        $count = mysqli_num_rows($query);
+
+                        if($count == 0){
+                        $output = 'There was no search results!';
+                        }else {
+                        while ($row =mysqli_fetch_array($query)){
+
+                       $output = "";
+                    }
+                }
+
+        }*/
+
+
 
 if ( ! function_exists( 'travel_setup' ) ) :
 	/**
@@ -26,6 +58,12 @@ if ( ! function_exists( 'travel_setup' ) ) :
 
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
+
+
+
+
+
+
 
 		/*
 		 * Let WordPress manage the document title.
@@ -125,10 +163,10 @@ function travel_scripts() {
     wp_enqueue_style( 'bootstrap',get_template_directory_uri() .'/assets/css/bootstrap.min.css');
 	wp_enqueue_style( 'travel-main-style',get_template_directory_uri() .'/assets/css/style.css');
 
+    wp_enqueue_script( 'jquery');
 
-	wp_enqueue_script( 'travel-navigation', get_template_directory_uri() . '/assets/js/script.js', array(), '1.0', true );
+	wp_enqueue_script( 'travel-main', get_template_directory_uri() . '/assets/js/main.js', array(), '1.0', true );
 
-	wp_enqueue_script( 'travel-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -162,4 +200,3 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
-

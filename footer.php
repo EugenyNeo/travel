@@ -44,35 +44,24 @@
     		<div class="col col-md-3">
     			<div class="about_us">
     				<h3>About us</h3>
-
     				<a href="">About TravelCream</a><br>
     				<a href="">Careers</a><br>
     				<a href="">Blog</a><br>
     				<a href="">Privacy Policy</a><br>
     				<a href="">Terms of Usage</a><br>
-
-
     			</div>
     		</div>
     		<div class="col col-md-3">
     			<div class="contact">
-
     				<h3>Contact</h3>
-
-
     				<p>Feel free to get in touch via email:<br>
     				<a href="" class="active">support@travelcream.com</a></p>
-
-
     			</div>
     		</div>
 
     		</div>
-
     	</div>
-
     </footer>
-
 <?php wp_footer(); ?>
 
 </body>

@@ -1,4 +1,40 @@
 
+                 <!--     <?php if(count($flights) === 0): ?>
+                          <li><a href="#"><i class="glyghicon glyghicon-plus-sign" ></i>Adding item</a></li>
+                              <?php else: ?>
+                               <?php
+                              foreach($flights as $flight)
+                              {
+                              echo' <li><a href="#">'.$flights['flight_airline'].'</a></li>';
+                              $i++;
+                              }
+                              ?>
+                         <?php endif;?>
+
+
+				<?php
+                 $flights = get_flights($link);
+                 ?>
+                		 <?php if(count($flights) === 0): ?>
+                		 <p><a></a></p>
+
+                		<?php foreach($flights as $flight): ?>
+
+                		<?php endforeach;?>
+                		<?php endif;?>
+
+
+                   ?php if(count($flights) === 0): ?> -->
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -34,4 +70,5 @@ wp_nav_menu( array(
 ) );
 ?>
  </nav><!-- #site-navigation -->
+ <!--<?php echo get_template_directory_uri(); ?>/assets/  -->
 </header><!-- #masthead -->
