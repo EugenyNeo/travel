@@ -1,10 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="70eec9a8-a505-41de-85fa-71d9c445c82e" name="Default Changelist" comment="">
+    <list default="true" id="70eec9a8-a505-41de-85fa-71d9c445c82e" name="Default Changelist" comment="Adding changes...">
+      <change afterPath="$PROJECT_DIR$/config.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logout.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/register.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/welcome.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/functions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template-homepage.php" beforeDir="false" afterPath="$PROJECT_DIR$/template-homepage.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,7 +42,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Ignored.Files" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -54,7 +62,7 @@
     </option>
   </component>
   <component name="SvnConfiguration">
-    <configuration />
+    <configuration>C:\Users\jerem\AppData\Roaming\Subversion</configuration>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -101,7 +109,59 @@
       <workItem from="1583355882878" duration="1328000" />
       <workItem from="1583357985465" duration="441000" />
       <workItem from="1583398493048" duration="893000" />
-      <workItem from="1583399418933" duration="1041000" />
+      <workItem from="1583399418933" duration="1799000" />
+      <workItem from="1583401627265" duration="1990000" />
+      <workItem from="1583403628028" duration="1794000" />
+      <workItem from="1583405439238" duration="2023000" />
+      <workItem from="1583407622024" duration="1795000" />
+      <workItem from="1583409429376" duration="1795000" />
+      <workItem from="1583411235332" duration="1810000" />
+      <workItem from="1583413223332" duration="1820000" />
+      <workItem from="1583415197998" duration="741000" />
+      <workItem from="1583417199979" duration="1795000" />
+      <workItem from="1583419008328" duration="2066000" />
+      <workItem from="1583421898949" duration="344000" />
+      <workItem from="1583423145018" duration="1803000" />
+      <workItem from="1583424961244" duration="1798000" />
+      <workItem from="1583426772445" duration="1795000" />
+      <workItem from="1583428578163" duration="742000" />
+      <workItem from="1583501481688" duration="1573000" />
+      <workItem from="1583503303617" duration="1793000" />
+      <workItem from="1583505108735" duration="1604000" />
+      <workItem from="1583579565579" duration="1432000" />
+      <workItem from="1583581370206" duration="1795000" />
+      <workItem from="1583583176570" duration="1796000" />
+      <workItem from="1583584994289" duration="1795000" />
+      <workItem from="1583586801960" duration="1376000" />
+      <workItem from="1583588680351" duration="1794000" />
+      <workItem from="1583590491642" duration="1566000" />
+      <workItem from="1583592577817" duration="904000" />
+      <workItem from="1583594416842" duration="1341000" />
+      <workItem from="1583611610172" duration="1924000" />
+      <workItem from="1583614154320" duration="1799000" />
+      <workItem from="1583615968403" duration="1796000" />
+      <workItem from="1583617776672" duration="1795000" />
+      <workItem from="1583619585510" duration="257000" />
+      <workItem from="1583737455571" duration="1177000" />
+      <workItem from="1583739764202" duration="1794000" />
+      <workItem from="1583741697853" duration="1810000" />
+      <workItem from="1583743526988" duration="1580000" />
+      <workItem from="1583745608157" duration="1793000" />
+      <workItem from="1583747436166" duration="1131000" />
+      <workItem from="1583749262074" duration="992000" />
+      <workItem from="1583751410014" duration="1187000" />
+      <workItem from="1583760179277" duration="1707000" />
+      <workItem from="1583761985307" duration="259000" />
+      <workItem from="1583762384737" duration="1782000" />
+      <workItem from="1583764177040" duration="1682000" />
+      <workItem from="1583765986837" duration="1722000" />
+      <workItem from="1583782714685" duration="1789000" />
+      <workItem from="1583784530350" duration="1818000" />
+      <workItem from="1583786385613" duration="1796000" />
+      <workItem from="1583788241596" duration="1666000" />
+      <workItem from="1583790048239" duration="1362000" />
+      <workItem from="1583791944845" duration="239000" />
+      <workItem from="1583792199011" duration="576000" />
     </task>
     <task id="LOCAL-00001" summary="Adding changes...">
       <created>1583399536406</created>
@@ -117,7 +177,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583399638081</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Adding changes...">
+      <created>1583400494540</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1583400494540</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -128,10 +195,14 @@
     <option name="LAST_COMMIT_MESSAGE" value="Adding changes..." />
   </component>
   <component name="WindowStateProjectService">
-    <state x="580" y="31" key="CommitChangelistDialog2" timestamp="1583399637448">
+    <state x="848" y="326" key="#com.intellij.featureStatistics.actions.ShowFeatureUsageStatisticsDialog" timestamp="1583403656209">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="580" y="31" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1583399637448" />
+    <state x="848" y="326" key="#com.intellij.featureStatistics.actions.ShowFeatureUsageStatisticsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1583403656209" />
+    <state x="580" y="31" key="CommitChangelistDialog2" timestamp="1583411344060">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="580" y="31" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1583411344060" />
     <state x="746" y="381" width="260" height="214" key="Github.ShareDialog" timestamp="1583399623503">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -140,10 +211,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="641" y="193" key="Github.UntrackedFilesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1582729091028" />
-    <state x="546" y="169" key="Vcs.Push.Dialog.v2" timestamp="1583399645332">
+    <state x="480" y="186" key="SettingsEditor" timestamp="1583792775190">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="546" y="169" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1583399645332" />
+    <state x="480" y="186" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1583792775190" />
+    <state x="546" y="169" key="Vcs.Push.Dialog.v2" timestamp="1583400497819">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="546" y="169" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1583400497819" />
     <state x="764" y="88" key="com.intellij.troubleshooting.ui.CollectTroubleshootingInformationDialog" timestamp="1583156149702">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

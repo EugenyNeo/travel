@@ -9,38 +9,32 @@
 function get_flights($db){
 
 		  $sql =" SELECT * FROM airlines, flights WHERE airlines.name_code=flights.code";
-
 		  $result = mysqli_query($db, $sql);
-
 		  $flights = mysqli_fetch_all($result, MYSQLI_ASSOC);
-
 		  return $flights;
 		}
 
+function get_filter() {
+         global $db;
+         $from = $db->real_escape_string($_POST['input_from']);
+         $to = $db->real_escape_string($_POST['input_to']);
+         $date = $db->real_escape_string($_POST['input_date']);
 
-		/*function search($db){
-                    if(isset($_POST['search']))
-                        $searchq = $_POST['search'];
-                        $searchq = preg_replace("##[^0-9a-z]#i", "", $searchq);
+         $sql = "SELECT * FROM airlines, flights WHERE flights.departure = $from AND flights.arrival = $to AND flights.date = $date";
+         $result = mysqli_query($db, $sql);
+         $flights = mysqli_fetch_all($result,1);
 
-                        $query = mysqli_query("SELECT * FROM flights WHERE flights.departure LIKE '%$searchq%'") or die("Could not search!");
-                        $count = mysqli_num_rows($query);
-
-                        if($count == 0){
-                        $output = 'There was no search results!';
-                        }else {
-                        while ($row =mysqli_fetch_array($query)){
-
-                       $output = "";
-                    }
-                }
-
-        }*/
-
+         return $flights;
+}
 
 
 if ( ! function_exists( 'travel_setup' ) ) :
 	/**
+	 $from = $db->real_escape_string($_POST['input_from']);
+             $to = $db->real_escape_string($_POST['input_to']);
+             $date = $db->real_escape_string($_POST['input_date']);
+	AND flights.arrival = $to AND flights.date = $date
+	  <!-- <?php $flights = isset($_POST['submit']) ? get_filter($db) : get_flights($db) ?>-->
 	 * Sets up theme defaults and registers support for various WordPress features.
 	 *
 	 * Note that this function is hooked into the after_setup_theme hook, which

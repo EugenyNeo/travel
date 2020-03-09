@@ -5,6 +5,7 @@ Template name: Home page
 
 require_once 'database.php';
 
+
 get_header();?>
 
 
@@ -12,12 +13,12 @@ get_header();?>
 	<div class="container">
 		<div class="row">
 
-					<for action="template-homepage.php" class="input-group col-lg-12" method="POST">
-						<input type="text" name="input_from"  class="input_one"  placeholder="Where are you leaving from?"/>
-					    <input type="text" class="input_two" placeholder="Where do you want to go?" />
-						<input type="Date" class="input_three" placeholder="Date" "/>
-						<input type="submit" class="btn_search" value="Search" onclick="search()" />
-					</for>
+					<form  class="input-group col col-lg-12 " method="post">
+						<input type="text" name="input_from" class="input_one"  placeholder="Where are you leaving from?"/>
+					    <input type="text"  name="input_to" class="input_two" placeholder="Where do you want to go?" />
+						<input type="Date"  name="input_date" class="input_three" placeholder="Date" "/>
+						<input type="submit" name="submit"   class="btn_search"  />
+					</form>
 
 		</div>
 			<div class="row" >
@@ -26,7 +27,7 @@ get_header();?>
 
 				<ul class="menu_flights d-flex">
 					<li class="menu_flights__item">
-			            <a href="#" class="active">Non stop</a>
+			            <a href="#" >Non stop</a>
 					</li>
 					<li class="menu_flights__item">
 			            <a href="#" class="">Best price</a>
@@ -57,28 +58,13 @@ get_header();?>
 				</thead>
 				<tbody>
 
-
-				<?php
-                $flights = get_flights($db);
-                ?>
-
-
-
-                <?php
-                if(!empty($_POST)){
-                    print_r($_POST);
-                }
-                ?>
-
-
-
+              <?php $flights = isset($_POST['submit']) ? get_filter($db) : get_flights($db) ?>
 
 				<?php if(count($flights) === 0): ?>
-				   echo 'Other info';
+				   echo 'Your request there is nothing!';
 				   <?php else: ?>
 
 				<?php foreach($flights as $flight): ?>
-
 					<tr>
 						<td class="d-flex">
 							<span style="padding:10px 0" >
@@ -91,10 +77,10 @@ get_header();?>
 						</td>
 						<td>
 							<h6><?=$flight["date"]?></h6>
-							<p><?=$flight["reserve"]?></p>
+							<p>In 3 days</p>
 						</td>
 						<td>
-							<h6><?=$flight["departure"]?></h6>
+							<h6><?=$flight["departure"]?> (<?=$flight["airport_from"]?>)</h6>
 							<p><?=$flight["dep_time"]?></p>
 						</td>
 						<td>
@@ -103,7 +89,7 @@ get_header();?>
 						</td>
 						<td>
 							<h6><?=$flight["time_flitgh"]?></h6>
-							<p><?=$flight["from_to"]?></p>
+							<p><?=$flight["airport_from"]?> - <?=$flight["airport_to"]?></p>
 						</td>
 						<td>
 							<button class="btn btn_price"><?=$flight["price"]?>$</button>
@@ -113,6 +99,7 @@ get_header();?>
                    <?php endforeach; ?>
                    <?php endif; ?>
 
+
 				</tbody>
 			</table>
 
@@ -120,7 +107,7 @@ get_header();?>
 		</div>
 
 			<div class="all_flights">
-		       <a href="#">See all flights</a>
+		       <a href="/">See all flights</a>
 	        </div>
 	</div>
 
