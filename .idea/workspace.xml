@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="70eec9a8-a505-41de-85fa-71d9c445c82e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -154,7 +153,7 @@
       <workItem from="1583790048239" duration="1362000" />
       <workItem from="1583791944845" duration="239000" />
       <workItem from="1583792199011" duration="977000" />
-      <workItem from="1583793186819" duration="61000" />
+      <workItem from="1583793186819" duration="404000" />
     </task>
     <task id="LOCAL-00001" summary="Adding changes...">
       <created>1583399536406</created>
@@ -184,11 +183,36 @@
       <option name="project" value="LOCAL" />
       <updated>1583792979124</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Adding changes...">
+      <created>1583793256732</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1583793256732</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Adding changes...">
+      <created>1583793318746</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1583793318746</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Adding changes..." />
@@ -199,10 +223,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="848" y="326" key="#com.intellij.featureStatistics.actions.ShowFeatureUsageStatisticsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1583403656209" />
-    <state x="580" y="31" key="CommitChangelistDialog2" timestamp="1583793267301">
+    <state x="580" y="31" key="CommitChangelistDialog2" timestamp="1583793318040">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="580" y="31" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1583793267301" />
+    <state x="580" y="31" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1583793318040" />
+    <state x="912" y="266" key="FileChooserDialogImpl" timestamp="1583793582238">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="912" y="266" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1583793582238" />
     <state x="746" y="381" width="260" height="214" key="Github.ShareDialog" timestamp="1583399623503">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -215,10 +243,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="480" y="186" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1583793025340" />
-    <state x="546" y="169" key="Vcs.Push.Dialog.v2" timestamp="1583400497819">
+    <state x="546" y="169" key="Vcs.Push.Dialog.v2" timestamp="1583793321708">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="546" y="169" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1583400497819" />
+    <state x="546" y="169" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1583793321708" />
     <state x="941" y="428" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1583793279419">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
