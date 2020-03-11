@@ -9,8 +9,7 @@
  *
  * @package travel
  */
- require_once 'database.php';
- require_once 'functions.php';
+
 
 ?>
 
@@ -24,10 +23,49 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
 
+
 	<?php wp_head(); ?>
+
+
 </head>
 
 <body <?php body_class(); ?>>
+<?php
+require ('connect.php');
+if(isset($_POST['username']) && isset($_POST['password'])){
+    $username =$_POST['username'];
+    $email =$_POST['email'];
+    $password =$_POST['password'];
+
+    $query = "INSERT INTO auth (username, password, email) VALUES ('$username','$email', '$password')";
+    $results =mysqli_query($connection, $query);
+
+    if($results){
+        $smsg =" Registration is successfully!";
+    }else{
+        $fsmsg = "Error!";
+    }
+}
+?>
+<section class="register" id="register">
+    <div class="container ">
+        <span class="icon" id="icon"><a href=""><i class="fas fa-times"></i></a></span>
+        <div class="col col-md-12 block_">
+
+        <form class="form-signin" method="POST">
+            <h2>Registration</h2>
+            <?php if(isset($smsg)){?><div class="alert alert-success" role="alert"><?php  echo $smsg; ?></div><?php }?>
+            <?php if(isset($fsmsg)){?><div class="alert alert-danger" role="alert"><?php  echo $fsmsg; ?></div><?php }?>
+            <input type="text" name="username" class="form-control" placeholder="Username" required height="50">
+            <input type="email" name="email" class="form-control" placeholder="Email" required height="50">
+            <input type="password" name="password" class="form-control" placeholder="Password" required height="50">
+            <button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
+        </form>
+        </div>
+    </div>
+</section>
+
+
 
 <header id="header" class="header">
 	<div class="container-fluid">
@@ -64,7 +102,7 @@
 
 
                          <div class="login col-sm-4 col-md-3 col-lg-6">
-                             <a href="/register.php" class="login_btn">Login</a>
+                             <a href="#" class="login_btn" onclick="toggle()">Login</a>
                          </div>
 
                      </div>

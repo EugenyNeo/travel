@@ -20,7 +20,7 @@ function get_filter() {
          $to = $db->real_escape_string($_POST['input_to']);
          $date = $db->real_escape_string($_POST['input_date']);
 
-         $sql = "SELECT * FROM airlines, flights WHERE flights.departure = $from AND flights.arrival = $to AND flights.date = $date";
+         $sql = "SELECT * FROM airlines, flights WHERE flights.code = airlines.name_code AND flights.departure = $from AND flights.arrival = $to  AND flights.date = $date ";
          $result = mysqli_query($db, $sql);
          $flights = mysqli_fetch_all($result,1);
 
@@ -29,7 +29,7 @@ function get_filter() {
 
 
 if ( ! function_exists( 'travel_setup' ) ) :
-	/**
+	/**SELECT * FROM airlines, flights WHERE flights.departure = $from AND flights.arrival = $to AND flights.date = $date
 	 $from = $db->real_escape_string($_POST['input_from']);
              $to = $db->real_escape_string($_POST['input_to']);
              $date = $db->real_escape_string($_POST['input_date']);

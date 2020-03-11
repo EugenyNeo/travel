@@ -2,21 +2,18 @@
 
 $(document).ready(function(){
 
-   /* var input_from;
-    var input_to;
-    var input_date;
 
-    $("[type=submit], button").on("click", function(){
-        input_from =$("input_from");
-        input_to =$("input_to");
-        input_date =$("input_date");
-        alert("From =  "+input_from.toString() + "To = "+ input_to.toString() + " Data: " + input_date.toString() );
-    });*/
+    $(".login_btn").click(function (e) {
+        $("#register").toggle("display:", "block");
+        e.preventDefault();
 
-   /* $( ".fas" ).click(function() {
-        $(".menu").css("display:","block");
+    });
 
-    });*/
+     $("#icon").click(function (e) {
+        $("#register").toggle();
+        e.preventDefault();
+
+     });
 
     $(window).scroll(function() {
             if ($(this).scrollTop() > 500){
@@ -29,6 +26,3 @@ $(document).ready(function(){
 
 
 });
-
-
-

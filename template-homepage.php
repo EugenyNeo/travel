@@ -106,7 +106,7 @@ get_header();?>
            </div>
 		</div>
 
-			<div class="all_flights">
+			<div class="all_flights all">
 		       <a href="/">See all flights</a>
 	        </div>
 	</div>
@@ -243,7 +243,7 @@ get_header();?>
       			</div>
       		</div>
 
-            <div class="all_flights">
+            <div class="all_flights all">
 		       <a href="#">See all flights</a>
 	        </div>
 
@@ -315,7 +315,7 @@ get_header();?>
 		</div>
 
      </div>
-            <div class="all_attr">
+            <div class="all_attr all">
 		       <a href="#">See all attractions</a>
 	        </div>
 </div>
@@ -373,7 +373,7 @@ get_header();?>
 			</div>
 		</div>
 
-            <div class="all_trips">
+            <div class="all_trips all">
 		       <a href="#">See all Trips</a>
 	        </div>
 
