@@ -2,19 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="70eec9a8-a505-41de-85fa-71d9c445c82e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/footer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/functions.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logout.php" beforeDir="false" afterPath="$PROJECT_DIR$/logout.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/register.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/registration.php" beforeDir="false" afterPath="$PROJECT_DIR$/registration.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template-homepage.php" beforeDir="false" afterPath="$PROJECT_DIR$/template-homepage.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/welcome.php" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -225,7 +214,8 @@
       <workItem from="1584693676271" duration="1686000" />
       <workItem from="1584700672338" duration="459000" />
       <workItem from="1584865766149" duration="1419000" />
-      <workItem from="1584955109044" duration="837000" />
+      <workItem from="1584955109044" duration="1149000" />
+      <workItem from="1584963019650" duration="547000" />
     </task>
     <task id="LOCAL-00001" summary="Adding changes...">
       <created>1583399536406</created>
@@ -290,7 +280,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583919184279</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Adding changes...">
+      <created>1584956021786</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1584956021786</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -332,18 +329,18 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="848" y="326" key="#com.intellij.featureStatistics.actions.ShowFeatureUsageStatisticsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1583403656209" />
-    <state x="580" y="31" key="CommitChangelistDialog2" timestamp="1583793651552">
+    <state x="580" y="31" key="CommitChangelistDialog2" timestamp="1584956020578">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="580" y="31" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1583793651552" />
+    <state x="580" y="31" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1584956020578" />
     <state x="912" y="266" key="FileChooserDialogImpl" timestamp="1583793582238">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="912" y="266" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1583793582238" />
-    <state x="746" y="381" width="260" height="214" key="Github.ShareDialog" timestamp="1583399623503">
+    <state x="746" y="381" width="260" height="214" key="Github.ShareDialog" timestamp="1584963259057">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="746" y="381" width="260" height="214" key="Github.ShareDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1583399623503" />
+    <state x="746" y="381" width="260" height="214" key="Github.ShareDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1584963259057" />
     <state x="641" y="193" key="Github.UntrackedFilesDialog" timestamp="1582729091028">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -352,10 +349,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="480" y="186" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1583793025340" />
-    <state x="546" y="169" key="Vcs.Push.Dialog.v2" timestamp="1583793656275">
+    <state x="546" y="169" key="Vcs.Push.Dialog.v2" timestamp="1584956023587">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="546" y="169" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1583793656275" />
+    <state x="546" y="169" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1584956023587" />
     <state x="671" y="413" key="com.intellij.ide.util.TipDialog" timestamp="1584955116140">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
