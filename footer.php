@@ -18,7 +18,7 @@
     		<div class="row">
     			<div class="col col-md-3">
     			<div class="cities">
-    				<h3>Cities</h3>
+    				<h1>Cities</h1>
 
     				<a href="">Paris</a><br>
     				<a href="">Miami</a><br>
@@ -31,7 +31,7 @@
     		</div>
     		<div class="col col-md-3">
     			<div class="explore">
-    				<h3>Explore</h3>
+    				<h1>Explore</h1>
 
     				<a href="">Register</a><br>
     				<a href="">Login</a><br>
@@ -43,7 +43,7 @@
     		</div>
     		<div class="col col-md-3">
     			<div class="about_us">
-    				<h3>About us</h3>
+    				<h1>About us</h1>
     				<a href="">About TravelCream</a><br>
     				<a href="">Careers</a><br>
     				<a href="">Blog</a><br>
@@ -53,7 +53,7 @@
     		</div>
     		<div class="col col-md-3">
     			<div class="contact">
-    				<h3>Contact</h3>
+    				<h1>Contact</h1>
     				<p>Feel free to get in touch via email:<br>
     				<a href="" class="active">support@travelcream.com</a></p>
     			</div>

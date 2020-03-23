@@ -16,13 +16,12 @@ get_header();?>
 					<form  class="input-group col col-lg-12 " method="post">
 						<input type="text" name="input_from" class="input_one"  placeholder="Where are you leaving from?"/>
 					    <input type="text"  name="input_to" class="input_two" placeholder="Where do you want to go?" />
-						<input type="Date"  name="input_date" class="input_three" placeholder="Date" "/>
-						<input type="submit" name="submit"   class="btn_search"  />
+						<input type="date"  name="input_date" class="input_three" placeholder="Date" required/>
+						<input type="submit" name="Submit"   class="btn_search"  />
 					</form>
 
 		</div>
 			<div class="row" >
-
 				<h4 class="text_ d-flex justify-content-center">Flights</h4>
 
 				<ul class="menu_flights d-flex">
@@ -35,7 +34,7 @@ get_header();?>
 					<li class="menu_flights__item">
 			            <a href="#">Airline</a>
 					</li>
-					<li class="menu_flights__item">
+					<li class="menu_flights__item ">
 			            <a href="#">Schedule</a>
 					</li>
 				</ul>
@@ -52,11 +51,11 @@ get_header();?>
 						<th>Date</th>
 						<th>Departure</th>
 						<th>Arrival</th>
-						<th>Time</th>
+						<th  class="time">Time</th>
 						<th class="price">Price</th>
 					</tr>
 				</thead>
-				<tbody>
+				<tbody style="padding:30px 0px 10px 0px">
 
               <?php $flights = isset($_POST['submit']) ? get_filter($db) : get_flights($db) ?>
 
@@ -66,32 +65,32 @@ get_header();?>
 
 				<?php foreach($flights as $flight): ?>
 					<tr>
-						<td class="d-flex">
+						<td class="d-flex justify-content-left">
 							<span style="padding:10px 0" >
 								<img class="vueling_img" src="<?=$flight["image"]?>" width="35px" height="35px" alt="airline_name" >
 							</span>
 							<span style="margin-left:20px;">
 								<h6><?=$flight["name"]?></h6>
-						    	<p><?=$flight["code"]?>.<?=$flight["no"]?></p>
+						    	<p><?=$flight["code_air"]?><?=$flight["no"]?></p>
 						    </span>
 						</td>
 						<td>
-							<h6><?=$flight["date"]?></h6>
+							<h6><?php $datetime =$flight["date"] ?><?=date("Y/m/d",strtotime($datetime))?></h6>
 							<p>In 3 days</p>
 						</td>
 						<td>
 							<h6><?=$flight["departure"]?> (<?=$flight["airport_from"]?>)</h6>
-							<p><?=$flight["dep_time"]?></p>
+							<p><?php $datetime =$flight["date"] ?><?=date("H:m",strtotime($datetime))?></p>
 						</td>
-						<td>
+						<td >
 							<h6><?=$flight["arrival"]?></h6>
-							<p><?=$flight["arr_time"]?></p>
+							<p><?php $datetime =$flight["arr_time"] ?><?=date("H:m",strtotime($datetime))?></p>
 						</td>
-						<td>
-							<h6><?=$flight["time_flitgh"]?></h6>
+                        <td>
+							<h6><?=date("H:m",strtotime($flight["SELECT (flights.arr_time - flights.date) FROM flights" ]))?></h6>
 							<p><?=$flight["airport_from"]?> - <?=$flight["airport_to"]?></p>
 						</td>
-						<td>
+						<td >
 							<button class="btn btn_price"><?=$flight["price"]?>$</button>
 						</td>
 					</tr>
@@ -143,7 +142,7 @@ get_header();?>
       						</div>
 
       						<div class="description">
-      							<h6>Hotel Paris Ouest Acheros</h6>
+      							<h4>Hotel Paris Ouest Acheros</h4>
       							<div class="option">
       								<span class="distance">12.3 km</span>
       								<span class="wifi">Free Wi-Fi</span>
@@ -161,7 +160,7 @@ get_header();?>
       						</div>
 
       						<div class="description">
-      							<h6>Hotel Paris Ouest Acheros</h6>
+      							<h4>Hotel Paris Ouest Acheros</h4>
       							<div class="option">
       								<span class="distance">12.3 km</span>
       								<span class="wifi">Free Wi-Fi</span>
@@ -178,7 +177,7 @@ get_header();?>
       						</div>
 
       						<div class="description">
-      							<h6>Hotel Paris Ouest Acheros</h6>
+      							<h4>Hotel Paris Ouest Acheros</h4>
       							<div class="option">
       								<span class="distance">12.3 km</span>
       								<span class="wifi">Free Wi-Fi</span>
@@ -198,7 +197,7 @@ get_header();?>
       						</div>
 
       						<div class="description">
-      							<h6>Hotel Paris Ouest Acheros</h6>
+      							<h4>Hotel Paris Ouest Acheros</h4>
       							<div class="option">
       								<span class="distance">12.3 km</span>
       								<span class="wifi">Free Wi-Fi</span>
@@ -216,7 +215,7 @@ get_header();?>
       						</div>
 
       						<div class="description">
-      							<h6>Hotel Paris Ouest Acheros</h6>
+      							<h4>Hotel Paris Ouest Acheros</h4>
       							<div class="option">
       								<span class="distance">12.3 km</span>
       								<span class="wifi">Free Wi-Fi</span>
@@ -232,7 +231,7 @@ get_header();?>
       						</div>
 
       						<div class="description">
-      							<h6>Hotel Paris Ouest Acheros</h6>
+      							<h4>Hotel Paris Ouest Acheros</h4>
       							<div class="option">
       								<span class="distance">12.3 km</span>
       								<span class="wifi">Free Wi-Fi</span>

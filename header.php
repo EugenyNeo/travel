@@ -10,11 +10,14 @@
  * @package travel
  */
 
+require ('registration.php');
+
 
 ?>
 
 <!doctype html>
-<html <?php language_attributes(); ?>>
+<html <?php language_attributes(); ?> xmlns:amrgin-top="http://www.w3.org/1999/xhtml"
+                                      xmlns:margin-top="http://www.w3.org/1999/xhtml">
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -22,50 +25,11 @@
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
-
-
 	<?php wp_head(); ?>
-
 
 </head>
 
 <body <?php body_class(); ?>>
-<?php
-require ('connect.php');
-if(isset($_POST['username']) && isset($_POST['password'])){
-    $username =$_POST['username'];
-    $email =$_POST['email'];
-    $password =$_POST['password'];
-
-    $query = "INSERT INTO auth (username, password, email) VALUES ('$username','$email', '$password')";
-    $results =mysqli_query($connection, $query);
-
-    if($results){
-        $smsg =" Registration is successfully!";
-    }else{
-        $fsmsg = "Error!";
-    }
-}
-?>
-<section class="register" id="register">
-    <div class="container ">
-        <span class="icon" id="icon"><a href=""><i class="fas fa-times"></i></a></span>
-        <div class="col col-md-12 block_">
-
-        <form class="form-signin" method="POST">
-            <h2>Registration</h2>
-            <?php if(isset($smsg)){?><div class="alert alert-success" role="alert"><?php  echo $smsg; ?></div><?php }?>
-            <?php if(isset($fsmsg)){?><div class="alert alert-danger" role="alert"><?php  echo $fsmsg; ?></div><?php }?>
-            <input type="text" name="username" class="form-control" placeholder="Username" required height="50">
-            <input type="email" name="email" class="form-control" placeholder="Email" required height="50">
-            <input type="password" name="password" class="form-control" placeholder="Password" required height="50">
-            <button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
-        </form>
-        </div>
-    </div>
-</section>
-
-
 
 <header id="header" class="header">
 	<div class="container-fluid">
@@ -87,12 +51,13 @@ if(isset($_POST['username']) && isset($_POST['password'])){
         							<li class="menu__item">
         								<a href="#hotels">Hotels</a>
         							</li>
+
         							<li class="menu__item">
-        								<a href="#trips">Trips</a>
+        								<a href="#attractions">Attractions</a>
         							</li>
-        							<li class="menu__item">
-        								<a href="#">Activity</a>
-        							</li>
+                                    <li class="menu__item">
+                                        <a href="#trips">Trips</a>
+                                    </li>
         							<li class="menu__item">
         								<a href="#">Deals</a>
         							</li>
@@ -102,7 +67,7 @@ if(isset($_POST['username']) && isset($_POST['password'])){
 
 
                          <div class="login col-sm-4 col-md-3 col-lg-6">
-                             <a href="#" class="login_btn" onclick="toggle()">Login</a>
+                             <a href="#" class="login_btn">Login</a>
                          </div>
 
                      </div>

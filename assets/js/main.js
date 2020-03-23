@@ -3,6 +3,10 @@
 $(document).ready(function(){
 
 
+ /*   $("section").click(function (e) {
+           $(this).css("margin-top", "100px");
+
+       });*/
     $(".login_btn").click(function (e) {
         $("#register").toggle("display:", "block");
         e.preventDefault();
@@ -22,7 +26,7 @@ $(document).ready(function(){
             if ($(this).scrollTop() < 200){
                 $('.navbar').removeClass('fixed').fadeIn('500');
             }
+
+
     });
-
-
 });

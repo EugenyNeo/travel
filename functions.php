@@ -8,7 +8,7 @@
  */
 function get_flights($db){
 
-		  $sql =" SELECT * FROM airlines, flights WHERE airlines.name_code=flights.code";
+		  $sql =" SELECT * FROM airlines, flights WHERE airlines.code_air = flights.code_flight";
 		  $result = mysqli_query($db, $sql);
 		  $flights = mysqli_fetch_all($result, MYSQLI_ASSOC);
 		  return $flights;
@@ -19,17 +19,18 @@ function get_filter() {
          $from = $db->real_escape_string($_POST['input_from']);
          $to = $db->real_escape_string($_POST['input_to']);
          $date = $db->real_escape_string($_POST['input_date']);
+         $step = date("Y/m/d", time()+60*60*24*3);
 
-         $sql = "SELECT * FROM airlines, flights WHERE flights.code = airlines.name_code AND flights.departure = $from AND flights.arrival = $to  AND flights.date = $date ";
+         $sql = "SELECT * FROM airlines,flights WHERE (airlines.code_air = flights.code_flight AND flights.departure = '$from' AND flights.arrival='$to' OR flights.date >='$date' AND flights.date <='$step') ";
+
          $result = mysqli_query($db, $sql);
          $flights = mysqli_fetch_all($result,1);
 
          return $flights;
 }
 
-
 if ( ! function_exists( 'travel_setup' ) ) :
-	/**SELECT * FROM airlines, flights WHERE flights.departure = $from AND flights.arrival = $to AND flights.date = $date
+	/**SELECT * FROM airlines, flights WHERE flights.departure = $from AND flights.arrival = $to AND flights.date = $date    OR (flights.date >='$date' AND flights.date <='$step')
 	 $from = $db->real_escape_string($_POST['input_from']);
              $to = $db->real_escape_string($_POST['input_to']);
              $date = $db->real_escape_string($_POST['input_date']);
@@ -52,11 +53,6 @@ if ( ! function_exists( 'travel_setup' ) ) :
 
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
-
-
-
-
-
 
 
 		/*

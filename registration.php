@@ -10,6 +10,7 @@
                <body>
                <?php
                require ('connect.php');
+
                if(isset($_POST['username']) && isset($_POST['password'])){
                    $username =$_POST['username'];
                    $email =$_POST['email'];
@@ -25,20 +26,23 @@
                    }
                }
                ?>
-              <section class="register" id="register">
-               <div class="container">
-                   <form class="form-signin" method="POST">
-                       <h2>Registartion</h2>
-                       <?php if(isset($smsg)){?><div class="alert alert-success" role="alert"><?php  echo $smsg; ?></div><?php }?>
-                       <?php if(isset($fsmsg)){?><div class="alert alert-danger" role="alert"><?php  echo $fsmsg; ?></div><?php }?>
-                       <input type="text" name="username" class="form-control" placeholder="Username" required>
-                       <input type="email" name="email" class="form-control" placeholder="Email" required>
-                       <input type="password" name="password" class="form-control" placeholder="Password" required>
-                    <button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
-                   </form>
-               </div>
-              </section>
+               <section class="register" id="register">
+                   <div class="container">
+                       <span class="icon" id="icon"><a href=""><i class="fas fa-times"></i></a></span>
+                       <div class="col col-md-12 block_">
 
-
+                           <form class="form-signin" method="POST">
+                               <h2>Registration</h2>
+                               <?php if(isset($smsg)){?><div class="alert alert-success" role="alert"><?php  echo $smsg; ?></div><?php }?>
+                               <?php if(isset($fsmsg)){?><div class="alert alert-danger" role="alert"><?php  echo $fsmsg; ?></div><?php }?>
+                               <input type="text" name="username" class="form-control" placeholder="Username" required height="50">
+                               <input type="email" name="email" class="form-control" placeholder="Email" required height="50">
+                               <input type="password" name="password" class="form-control" placeholder="Password" required height="50">
+                               <button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
+                               <a href="login.php" class="btn btn-lg btn-primary btn-block">Login</a>
+                           </form>
+                       </div>
+                   </div>
+               </section>
                </body>
                </html>
